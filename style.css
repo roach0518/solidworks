@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+    /* outline: 1px solid #f00; */
+}
+
+
+
+body {
+    background: #Dad7cd;
+}
+
+
+header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+header .container li {
+    font-size: 36px;
+    margin: 0 auto;
+}
+header .container li a {
+    color: #e63946;
+}
+header .container li a:hover {
+    cursor: pointer;
+}
+header .container li:nth-child(1) {
+    text-align: left;
+    position: relative;
+}
+header .container li:nth-child(2) {
+    text-align: right;
+    position: relative;
+}
+
+header .container li:nth-child(1):before {
+    content: "";
+    width: 100px;
+    height: 60px;
+    background-color: #f1faee;
+    top: -5px;
+    left: 30%;
+    position: absolute;
+    opacity: .8;
+    z-index: -1;
+}
+header .container li:nth-child(2):before {
+    content: "";
+    width: 100px;
+    height: 60px;
+    background-color: #a8dadc;
+
+    top: -5px;
+    left: 60%;
+    position: absolute;
+    opacity: .8;
+    z-index: -1;
+}
+
+
+
+
+
+@media screen and  (min-width: 768px) {
+
+    /* header {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    } */
+    
+    
+    header .container {
+        width: 700px;
+    }
+    header .container ul {
+        width: 100%;
+        display: flex; 
+        /* justify-content: space-around; */
+    }
+    /* header .container li {
+        font-size: 36px;
+        margin: 0 auto;
+    }
+    header .container li a {
+        color: #e63946;
+    }
+    header .container li a:hover {
+        cursor: pointer;
+    }
+    header .container li:nth-child(1) {
+        text-align: left;
+        position: relative;
+    }
+    header .container li:nth-child(2) {
+        text-align: right;
+        position: relative;
+    }
+    
+    header .container li:nth-child(1):before {
+        content: "";
+        width: 100px;
+        height: 60px;
+        background-color: #f1faee;
+        top: -5px;
+        left: 30%;
+        position: absolute;
+        opacity: .8;
+        z-index: -1;
+    }
+    header .container li:nth-child(2):before {
+        content: "";
+        width: 100px;
+        height: 60px;
+        background-color: #a8dadc;
+    
+        top: -5px;
+        left: 60%;
+        position: absolute;
+        opacity: .8;
+        z-index: -1;
+    } */
+
+}
+    
+
+
+@media screen and (max-width: 767px) {
+    header .container ul {
+        display: block;
+    }
+    header .container li {
+        text-align: center;
+        margin: 50px auto;
+        }
+
+}
