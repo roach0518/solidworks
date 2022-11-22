@@ -4,7 +4,7 @@
     border: none;
     list-style: none;
     text-decoration: none;
-    /* outline: 1px solid #f00; */
+    outline: 1px solid #f00;
 }
 
 
@@ -64,7 +64,6 @@ header .container li:nth-child(2):before {
     opacity: .8;
     z-index: -1;
 }
-
 
 
 
