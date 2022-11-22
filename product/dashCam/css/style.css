@@ -5,6 +5,7 @@
     /* outline: 1px solid #fa0; */
 }
 img {
+    width: 100%;
     display: inline-block;
     vertical-align: middle;
 }
