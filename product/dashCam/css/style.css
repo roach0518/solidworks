@@ -5,6 +5,7 @@
     /* outline: 1px solid #fa0; */
 }
 img {
+    display: inline-block;
     vertical-align: middle;
 }
 body {
