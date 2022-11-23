@@ -95,8 +95,8 @@ header nav {
         align-content: flex-start;
     }
     .portfolio .item {
-        width: 30%;
-        margin: 10px 1%;
+        width: 49%;
+        margin: 10px .5%;
         outline: 1px solid #000;
     }
     .portfolio .item img {
