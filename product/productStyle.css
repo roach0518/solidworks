@@ -16,10 +16,17 @@ img {
     vertical-align: middle;
 }
 
+a:hover {
+    color: #fa0;
+}
+a {
+    color: #000;
+}
 .container {
     max-width: 1200px;
     margin: auto;
 }
+
 
 
 
@@ -32,7 +39,9 @@ header nav {
 .portfolio .container {
 
 }
-
+.portfolio h3 {
+    text-align: center;
+}
 
 @media screen and (min-width: 768px) {
     .portfolio .container .portfolio-list {
