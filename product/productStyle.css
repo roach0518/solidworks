@@ -52,7 +52,7 @@ header nav {
     .portfolio .container .portfolio-list .item {
         width: calc(92%/4);
         margin: 1%;
-        outline: 1px solid #000;
+        /* outline: 1px solid #000; */
     }
 }
 
@@ -97,7 +97,7 @@ header nav {
     .portfolio .item {
         width: 49%;
         margin: 10px .5%;
-        outline: 1px solid #000;
+        /* outline: 1px solid #000; */
     }
     .portfolio .item img {
         width: 100%;
