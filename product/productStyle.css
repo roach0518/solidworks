@@ -7,6 +7,9 @@
     outline: 0px solid #fa0;
 }
 
+body {
+    outline: 1px solid #000;
+}
 header nav {
 
 }
@@ -38,14 +41,17 @@ header nav {
 
     .portfolio {
         width: 100%;
-        display: flex;
+        /* display: flex; */
     }
     .portfolio .container {
         display: flex;
-        flex-direction: column;
+        width: 100%;
+        flex-wrap: wrap;
+        align-content: flex-start;
     }
     .portfolio .item {
         width: 30%;
+        margin: 10px 1%;
         outline: 1px solid #000;
     }
     .portfolio .item img {
