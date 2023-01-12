@@ -1,150 +1,114 @@
 *{
-    margin: 0;
     padding: 0;
-    border: none;
+    margin: 0;
     list-style: none;
-    text-decoration: none;
-    /* outline: 1px solid #f00; */
+   outline: 1px solid #000; 
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 100px auto;
+    padding: 0 10px;
+}
 img {
     width: 100%;
     vertical-align: middle;
 }
 
-
-
-body {
-    background: #Dad7cd;
+.picShow {
+    margin-top: 150px;
+    outline: 1px solid #000;
+}
+.picShow .picItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 600px;
 }
 
-
-header {
+.picShow .angleRight,
+.picShow .angleLeft {
+    cursor: pointer;
+    width: 35px;
+    height: 50px;
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translatey(-50%);
 }
-
-
-header .container li {
-    font-size: 36px;
-    margin: 0 auto;
+.picShow .angleRight {
+    right: -50px;
 }
-header .container li a {
-    color: #e63946;
+.picShow .angleLeft {
+    left: -50px;
+    transform: translatey(-50%);
 }
-header .container li a:hover {
-    cursor: pointer;
-}
-header .container li:nth-child(1) {
-    text-align: left;
-    position: relative;
-}
-header .container li:nth-child(2) {
-    text-align: right;
-    position: relative;
-}
-
-header .container li:nth-child(1):before {
-    content: "";
-    width: 100px;
-    height: 60px;
-    background-color: #f1faee;
-    top: -5px;
-    left: 30%;
+.picShow .angleLeft:before,
+.picShow .angleRight:before { 
+    color: #fa0;
+    font-family: 'font awesome 5 free';
+    font-size: 50px;
+    font-weight: 900;  
     position: absolute;
-    opacity: .8;
-    z-index: -1;
 }
-header .container li:nth-child(2):before {
-    content: "";
-    width: 100px;
-    height: 60px;
-    background-color: #a8dadc;
 
-    top: -5px;
-    left: 60%;
+.picShow .angleLeft:before {
+    content: '\f104';  
+    top: 0;
+    left: 200px;
+}
+.picShow .angleRight:before{ 
+    content: '\f105';
+    top: 0;
+    right: 200px;
+}
+
+.picShow .circle {
+    /* width: 300px; */
     position: absolute;
-    opacity: .8;
-    z-index: -1;
+    bottom: 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    right: 5%;
+    top: 112%;
+}
+
+.picShow span:before {
+    content:'\f111';
+    color: #fff;
+    font-size: 10px;
+    font-weight: 900;
+    font-family: 'font awesome 5 free';
+}
+.picShow span {
+    /*color: transparent;*/
+    font-size: 0;
+    margin: 0 5px;
 }
 
 
-
-
-@media screen and  (min-width: 768px) {
-
-    /* header {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-    } */
-    
-    
-    header .container {
-        width: 700px;
-    }
-    header .container ul {
-        width: 100%;
-        display: flex; 
-        /* justify-content: space-around; */
-    }
-    /* header .container li {
-        font-size: 36px;
-        margin: 0 auto;
-    }
-    header .container li a {
-        color: #e63946;
-    }
-    header .container li a:hover {
-        cursor: pointer;
-    }
-    header .container li:nth-child(1) {
-        text-align: left;
-        position: relative;
-    }
-    header .container li:nth-child(2) {
-        text-align: right;
-        position: relative;
-    }
-    
-    header .container li:nth-child(1):before {
-        content: "";
-        width: 100px;
-        height: 60px;
-        background-color: #f1faee;
-        top: -5px;
-        left: 30%;
-        position: absolute;
-        opacity: .8;
-        z-index: -1;
-    }
-    header .container li:nth-child(2):before {
-        content: "";
-        width: 100px;
-        height: 60px;
-        background-color: #a8dadc;
-    
-        top: -5px;
-        left: 60%;
-        position: absolute;
-        opacity: .8;
-        z-index: -1;
-    } */
-
+.picList {
+    max-width: 500px;
+    width: 100%;
 }
-    
 
 
-@media screen and (max-width: 767px) {
-    header .container ul {
-        display: block;
-    }
-    header .container li {
-        text-align: center;
-        margin: 50px auto;
-        }
-
+.portfolio {
+    margin-top: 300px;
+}
+.portfolio .design {
+    display: flex;
+    flex-wrap: wrap;
+}
+.portfolio a {
+    max-width: 30%;
+    outline: 1px solid #000;
+    margin: 1%;
 }
