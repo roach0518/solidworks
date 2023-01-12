@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     list-style: none;
-   outline: 1px solid #000; 
+   /*outline: 1px solid #000;*/ 
 }
 
 .container {
@@ -21,7 +21,6 @@ img {
 
 .picShow {
     margin-top: 150px;
-    outline: 1px solid #000;
 }
 .picShow .picItem {
     display: flex;
@@ -109,6 +108,36 @@ img {
 }
 .portfolio a {
     max-width: 30%;
-    outline: 1px solid #000;
-    margin: 1%;
+    margin: 3%;
 }
+@media screen and (max-width: 767px) {
+    
+    .container {
+        width: 100%;
+        margin: auto;
+    }
+    .picShow {
+        margin-top: 0;
+    }
+
+    /*.picShow .picItem {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }*/
+
+    .portfolio {
+        margin-top: 20px;
+    }
+
+
+    .portfolio a {
+        max-width: 40%;
+        outline: 1px solid #000;
+        margin: 1%;
+    }
+
+    }
