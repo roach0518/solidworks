@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2fcd7f408a.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+
+
+    <div class="picShow">
+        <div class="container">
+            <div class="picItem">
+                <div class="angleRight"></div>
+                <div class="angleLeft"></div>
+                <div class="picList">
+                    <!-- <a href="https://pchome.com.tw"><img src="images/slider01.png" alt=""></a> -->
+                </div>
+                <div class="circle">
+                    
+                </div>
+                <!-- <i class="far fa-circle"></i> -->
+                <!-- <span><i class="far fa-circle"></i></span> -->
+                <!-- <a href="https://pchome.com.tw"><img src="images/0.png" alt=""></a> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio">
+        <div class="container">
+            <div class="design">
+                <a href="#"><img src="image/slider01.png" alt=""></a>
+                <a href="#"><img src="image/slider02.png" alt=""></a>
+                <a href="#"><img src="image/slider03.png" alt=""></a>
+                <a href="#"><img src="image/slider04.png" alt=""></a>
+                <a href="#"><img src="image/slider05.png" alt=""></a>
+                <a href="#"><img src="image/slider06.png" alt=""></a>
+                <a href="#"><img src="image/slider07.png" alt=""></a>
+                <a href="#"><img src="image/slider08.png" alt=""></a>
+                <a href="#"><img src="image/slider09.png" alt=""></a>
+                <a href="#"><img src="image/slider10.png" alt=""></a>
+                <a href="#"><img src="image/slider11.png" alt=""></a>
+                <a href="#"><img src="image/slider12.png" alt=""></a>
+            </div>  
+        </div>
+
+    </div>
+
+
+
+
+
+    <script>
+        (function(){
+            // var picObj = [
+            //     {
+            //         link:'https://pchome.com.tw',
+            //         img:'images/0.png'
+            //     },
+            //     {
+            //         link:'https://google.com.tw',
+            //         img:'images/1.png'
+            //     },
+            //     {
+            //         link:'https://pchome.com.tw',
+            //         img:'images/2.png'
+            //     },
+            //     {
+            //         link:'https://pchome.com.tw',
+            //         img:'images/3.png'
+            //     },
+            //     {
+            //         link:'https://pchome.com.tw',
+            //         img:'images/4.png'
+            //     },
+            //     {
+            //         link:'https://pchome.com.tw',
+            //         img:'images/5.png'
+            //     },
+            //     {
+            //         link:'https://pchome.com.tw',
+            //         img:'images/6.png'
+            //     },
+            //     {
+            //         link:'https://pchome.com.tw',
+            //         img:'images/7.png'
+            //     }
+            // ]
+            var picObj = [
+                {
+                    link:'url("/image/slider01.png")',
+                    img:'image/slider01.png'
+                },
+                {
+                    link:'url("/image/slider03.png")',
+                    img:'image/slider02.png'
+                },
+                {
+                    link:'url("/image/slider03.png")',
+                    img:'image/slider03.png'
+                },
+                {
+                    link:'url("/image/slider03.png")',
+                    img:'image/slider04.png'
+                },
+                {
+                    link:'url("/image/slider03.png")',
+                    img:'image/slider05.png'
+                },
+                {
+                    link:'url("/image/slider03.png")',
+                    img:'image/slider06.png'
+                },
+                {
+                    link:'url("/image/slider03.png")',
+                    img:'image/slider07.png'
+                },
+                {
+                    link:'url("/image/slider03.png")',
+                    img:'image/slider08.png'
+                },
+                {
+                    link:'url("/image/slider03.png")',
+                    img:'image/slider09.png'
+                },
+                {
+                    link:'url("/image/slider03.png")',
+                    img:'image/slider10.png'
+                },
+                {
+                    link:'url("/image/slider03.png")',
+                    img:'image/slider11.png'
+                },
+                {
+                    link:'url("/image/slider03.png")',
+                    img:'image/slider12.png'
+                },
+            ]
+
+            var picList = document.querySelector('.picList')
+            var angleLeft = document.querySelector('.angleLeft')
+            var angleRight = document.querySelector('.angleRight')
+            var circle = document.querySelector('.circle')
+            var html = ''
+            var idx = 0
+            var i = 0
+            var timeBox = null
+            //insert tag span
+            function insertSpan(){
+                for(var i = 0; i < picObj.length; i++ ){
+                html += '<span>' + i + '</span>'
+                }
+                circle.innerHTML  = html
+            }
+            insertSpan()
+
+
+            var span = document.querySelectorAll('span')
+                
+            html = '<a href="' + picObj[i].link + '"><img src="' + picObj[i].img + '" alt=""></a>'
+            picList.innerHTML = html
+            
+            //use the for set up spanTouch
+            for(var i = 0; i < picObj.length; i++){
+                span[i].addEventListener('click',spanTouch)
+            }
+
+
+
+            //will span the word in css font-size = 0, get this.innerText
+            //將span的字在css裏,字型大小設為0,得到this.innerText數值代入
+            function spanTouch(){
+                i = this.innerText
+                html = '<a href="' + picObj[i].link + '"><img src="' + picObj[i].img + '" alt=""></a>'
+                picList.innerHTML = html
+                clearInterval(timeBox)
+                picShow()
+                lightSpan()
+                span[i].style.opacity = 1
+            }
+
+            function lightSpan(){
+                for(var i = 0; i < picObj.length; i++){
+                    span[i].style.opacity = .5
+                }
+            }
+            lightSpan()
+            span[0].style.opacity = 1
+
+                    
+            
+            angleLeft.addEventListener('click',leftFu)
+            angleRight.addEventListener('click',rightFu)
+
+            function leftFu(){
+                i--
+                if(i < 0){
+                    i = picObj.length - 1
+                }
+                picRound()
+                clearInterval(timeBox)
+                picShow()
+                lightSpan()
+                span[i].style.opacity = 1
+            }
+
+            function rightFu(){
+                i++
+                if(i > picObj.length - 1){
+                    i = 0
+                }
+                clearInterval(timeBox)
+                picRound()
+                picShow()
+                lightSpan()
+                span[i].style.opacity = 1
+            }
+
+            function picRound(){
+                html = '<a href="' + picObj[i].link + '"><img src="' + picObj[i].img + '" alt=""></a>'
+                picList.innerHTML = html
+                span[0].style.opacity = 1
+            }
+
+
+
+            function picShow(){
+                timeBox = setInterval(function(){
+                i++
+                if(i > picObj.length - 1){
+                    i = 0
+
+                }
+                picRound()
+                lightSpan()
+                span[i].style.opacity = 1
+                
+            },1500)
+            }
+            
+            picShow()
+
+            picList.addEventListener('mouseover',function(){
+                clearInterval(timeBox)
+            })
+            picList.addEventListener('mouseout',function(){
+                picShow()
+            })
+
+        })()
+            
+
+
+    </script>
+
+    
+</body>
+</html>
