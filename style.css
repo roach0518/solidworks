@@ -48,6 +48,9 @@ img {
     background-color: #999;
     opacity: .3;
 } */
+.demo:nth-child(4) a {
+    width: 25%;
+}
 
 .title {
     /* background-color: aqua; */
@@ -73,15 +76,25 @@ h2 a:before {
     display: flex;
     /* justify-content: center; */
     align-items: center;
-}
-.pic img {
-    /* width: 20%; */
-    max-height: 450px;
+    flex-wrap: wrap;
 }
 .pic a {
     margin-left: 5px;
 }
 
-iframe {
-    max-height: 500px;
+.pic img {
+    /* width: 20%; */
+    max-height: 600px;
 }
+
+iframe {
+    max-height: 360px;
+    /* max-width: 23%; */
+    max-width: 560px;
+    width: 560px;
+    height: 360px;
+    padding: 10px;
+}
+
+
+/* <iframe width="560" height="315" src="https://www.youtube.com/embed/F7dtXn-d3wo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */
