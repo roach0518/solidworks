@@ -511,24 +511,28 @@ span.line-y {
 }
 .callbacks_nav.prev{
 	background: transparent url("../images/sli-lft.png") no-repeat ;
+	top: 250px;
+	/* bottom: 10px; */
 }
 .callbacks_nav.next{
 	background: transparent url("../images/sli-rit.png") no-repeat ;
+	top: 270px;
+
 }
 .callbacks_nav {
   	position: absolute;
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-	top: 52%;
-	left: 0;
-	opacity: 0.7;
-	z-index: 3;
-	text-indent: -9999px;
-	overflow: hidden;
-	text-decoration: none;
-	height: 25px;
-	width: 25px;
-	background: transparent url("../images/sli-rit.png") no-repeat left top;
-	margin-top: -167px;
+  	-webkit-tap-highlight-color: rgba(0,0,0,0);
+  	top: 53%;
+  	/* left: 0; */
+  	/* opacity: 0.7; */
+  	/* z-index: 3; */
+  	text-indent: -9999px;
+  	overflow: hidden;
+  	text-decoration: none;
+  	height: 26px;
+  	width: 26px;
+  	background: transparent url("../images/sli-rit.png") no-repeat left top;
+  	margin-top: -167px;
 }
 .callbacks_nav:active {
   opacity: 1.0;
@@ -2442,14 +2446,30 @@ font-size: 19px;
 }
 
 
-@media screen and (min-width: 400px) and (max-width:1200px) {
+@media screen and (min-width: 300px) and (max-width:1200px) {
 	span.line-x{
 		width: 0px;
 	}
 	span.line-y{
 		width: 0px;
 	}
-}
+	.molli .molli-top p {
+		/* font-size: 100px; */
+		width: 70%;
+		margin: auto;
+	}
+
+	#top .molli ul li{
+		display: block;                
+		width: 100%;
+		outline: 10px solid #000;
+	}
+	#top .molli ul li .molli-grids{
+		/* border: 1px solid #000; */
+		width: 45%;
+		margin: 2.5%;
+		/* min-height:500px; */
+	}
 
 
 
