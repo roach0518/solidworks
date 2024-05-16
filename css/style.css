@@ -2462,7 +2462,6 @@ font-size: 19px;
 	#top .molli ul li{
 		display: block;                
 		width: 100%;
-		outline: 10px solid #000;
 	}
 	#top .molli ul li .molli-grids{
 		/* border: 1px solid #000; */
