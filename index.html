@@ -229,7 +229,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 		var span = document.querySelectorAll('.banner span')
 			
-		html = '<a href="' + picObj[i].link + '" target="_blank"><img src="' + picObj[i].img + '" alt=""></a>'
+		html = '<a href="' + picObj[i].link + '"><img src="' + picObj[i].img + '" alt=""></a>'
 		picList.innerHTML = html
 		
 		//use the for set up spanTouch
@@ -287,7 +287,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		}
 
 		function picRound(){
-			html = '<a href="' + picObj[i].link + '"><img src="' + picObj[i].img + '" alt=""></a>'
+			html = '<a href="' + picObj[i].link + '" target="_blank"><img src="' + picObj[i].img + '" alt=""></a>'
 			picList.innerHTML = html
 			span[0].style.opacity = 1
 		}
